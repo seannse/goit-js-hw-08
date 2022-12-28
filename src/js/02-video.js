@@ -6,8 +6,7 @@ const iframe = document.querySelector('iframe');
 const player = new Player(iframe);
 
 const onSaveCurrentTime = function ({seconds}) {
-  localStorage.setItem(LS_KEY, seconds) 
-  console.log(seconds)  
+  localStorage.setItem(LS_KEY, seconds)  
 }
 
 player.setCurrentTime(localStorage.getItem(LS_KEY) || 0);
