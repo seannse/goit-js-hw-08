@@ -9,8 +9,8 @@ const onSaveCurrentTime = function ({seconds}) {
   localStorage.setItem(LS_KEY, seconds)  
 }
 
-player.setCurrentTime(localStorage.getItem(LS_KEY) || 0);
 player.on('timeupdate', throttle(onSaveCurrentTime, 1000));
+player.setCurrentTime(localStorage.getItem(LS_KEY) || 0);
 
 
 
