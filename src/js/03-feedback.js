@@ -19,12 +19,12 @@ const updateFormEl = function () {
   let afterParse;
   try {
     afterParse = JSON.parse(beforeParse) || {};
+    email.value = afterParse.email || '';
+    message.value = afterParse.message || '';
   } catch (error) {
     console.log(error.message);
   }
 
-  email.value = afterParse.email || '';
-  message.value = afterParse.message || '';
 };
 
 const onFormElSubmit = function (event) {
